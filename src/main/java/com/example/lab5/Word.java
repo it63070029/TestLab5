@@ -8,11 +8,13 @@ public class Word{
     public ArrayList<String> badWords;
     public ArrayList<String> goodWords;
     public Word(){
-        badWords.add("happy");
-        badWords.add("enjoy");
-        badWords.add("life");
-        goodWords.add("fuck");
-        goodWords.add("olo");
+        this.badWords = new ArrayList<>();
+        this.goodWords = new ArrayList<>();
+        this.badWords.add("fuck");
+        this.badWords.add("olo");
+        this.goodWords.add("happy");
+        this.goodWords.add("enjoy");
+        this.goodWords.add("life");
 
     }
 }

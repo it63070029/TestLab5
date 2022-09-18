@@ -18,14 +18,9 @@ public class WordPublisher {
     }
     @RequestMapping(value="/delBad/{word}")
     public ArrayList<String> deleteBadWord(@PathVariable("word") String s){
-        for (int i = 0; i < words.badWords.size(); i++) {
-            if(words.badWords.get(i).equals(s)){
-                this.words.badWords.remove(i);
-                return this.words.badWords;
-            }
 
-        }
-        return null;
+        this.words.badWords.remove(s);
+        return this.words.badWords;
     }
     @RequestMapping(value="/addGood/{word}")
     public ArrayList<String> addGoodWord(@PathVariable("word") String s){
@@ -35,13 +30,8 @@ public class WordPublisher {
     }
     @RequestMapping(value="/delGood/{word}")
     public ArrayList<String> deleteGoodWord(@PathVariable("word") String s){
-        for (int i = 0; i < words.goodWords.size(); i++) {
-            if(words.goodWords.get(i).equals(s)){
-                this.words.goodWords.remove(i);
-                return this.words.goodWords;
-            }
-        }
-        return null;
+        this.words.goodWords.remove(s);
+        return this.words.goodWords;
     }
     @RequestMapping(value="/proof/{sentence}")
     public String proofSentence(@PathVariable("sentence") String s){
